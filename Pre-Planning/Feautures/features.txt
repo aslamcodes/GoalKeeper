@@ -1,0 +1,3 @@
+Main/Basic Features:
+        1. An with Goal Widgets with description and Expands to displays its steps 
+        2. Gonna Have a navbar with Stats of completed goals and progress
