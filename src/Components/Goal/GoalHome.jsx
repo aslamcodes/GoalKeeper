@@ -1,8 +1,11 @@
 import React, { useContext, useState } from 'react';
+import ReactDOM from 'react-dom';
 import DataContext from '../../Data/data-context/DataContext.jsx';
 import GoalForm from './GoalForm.jsx';
 import GoalPage from './GoalPage.jsx';
 import AddButton from '../UI/Buttons/Add Button/AddButton.jsx';
+import Modal from '../UI/Modal/Modal.jsx';
+import Backdrop from '../UI/Backdrop/Backdrop.jsx';
 export default function GoalHome() {
   const goalDataCtx = useContext(DataContext);
   const [goalDataList, setGoalDataList] = useState(goalDataCtx);
@@ -13,7 +16,18 @@ export default function GoalHome() {
 
   return (
     <>
-      <GoalForm onAddGoalData={onAddGoalDataHandler} />
+      {ReactDOM.createPortal(
+        <Modal>
+          <GoalForm onAddGoalData={onAddGoalDataHandler} />
+        </Modal>,
+        document.getElementById('root-overlays')
+      )}
+
+      {ReactDOM.createPortal(
+        <Backdrop />,
+        document.getElementById('root-backdrop')
+      )}
+
       <GoalPage goalData={goalDataList} />
       <AddButton isFloatingButton={true} />
     </>
