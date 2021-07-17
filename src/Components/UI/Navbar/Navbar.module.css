@@ -8,7 +8,9 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 30px;
+  padding: 20px 30px;
+  background-color: #54436b;
+  color: #7c83fd;
 }
 
 .logo {
@@ -27,4 +29,15 @@
 
 .nav__items li a {
   text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  font-size: inherit;
+  padding: 0;
+  margin: 0;
+  font-size: 25px;
 }
