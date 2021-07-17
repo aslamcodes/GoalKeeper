@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaPlus } from 'react-icons/fa';
+import { iconsStyle } from '../../../../utils/utils';
 import RoundedButton from '../Rounded Button/RoundedButton';
 
 export default function AddButton(props) {
@@ -9,7 +10,7 @@ export default function AddButton(props) {
     <RoundedButton
       isFloatingButton={props.isFloatingButton}
       onClick={addButtonHandler}>
-      <FaPlus />
+      <FaPlus style={iconsStyle} />
     </RoundedButton>
   );
 }
