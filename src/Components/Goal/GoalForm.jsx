@@ -3,7 +3,7 @@ import Styles from './GoalForm.module.css';
 import Card from '../UI/Card/Card.jsx';
 import CheckButton from '../UI/Buttons/Check Button/CheckButton';
 import AddButton from '../UI/Buttons/Add Button/AddButton';
-export default function GoalForm() {
+export default function GoalForm(props) {
   const [goalData, setGoalData] = useState({
     goal: '',
     steps: [],
@@ -16,6 +16,7 @@ export default function GoalForm() {
 
   const submitHandler = (e) => {
     e.preventDefault();
+    props.onAddGoalData(goal);
   };
   return (
     <form onSubmit={submitHandler} className={Styles['goalform__form']}>

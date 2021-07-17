@@ -5,7 +5,8 @@ export default function RoundedButton(props) {
     <button
       className={`${Styles['button']}  ${
         props.isFloatingButton ? Styles['floating-button'] : ''
-      } `}>
+      } `}
+      onClick={props.onClick}>
       {props.children}
     </button>
   );

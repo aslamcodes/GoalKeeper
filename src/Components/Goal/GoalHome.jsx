@@ -9,27 +9,36 @@ import Backdrop from '../UI/Backdrop/Backdrop.jsx';
 export default function GoalHome() {
   const goalDataCtx = useContext(DataContext);
   const [goalDataList, setGoalDataList] = useState(goalDataCtx);
+  const [isModalActive, setIsModalActive] = useState(false);
 
   const onAddGoalDataHandler = (goalToAdd) => {
     setGoalDataList([goalToAdd, ...goalDataList]);
+    toggleModal();
   };
-
+  const toggleModal = () => {
+    setIsModalActive(() => {
+      if (isModalActive) return false;
+      else return true;
+    });
+  };
   return (
     <>
-      {ReactDOM.createPortal(
-        <Modal>
-          <GoalForm onAddGoalData={onAddGoalDataHandler} />
-        </Modal>,
-        document.getElementById('root-overlays')
-      )}
+      {isModalActive &&
+        ReactDOM.createPortal(
+          <Modal>
+            <GoalForm onAddGoalData={onAddGoalDataHandler} />
+          </Modal>,
+          document.getElementById('root-overlays')
+        )}
 
-      {ReactDOM.createPortal(
-        <Backdrop />,
-        document.getElementById('root-backdrop')
-      )}
+      {isModalActive &&
+        ReactDOM.createPortal(
+          <Backdrop />,
+          document.getElementById('root-backdrop')
+        )}
 
       <GoalPage goalData={goalDataList} />
-      <AddButton isFloatingButton={true} />
+      <AddButton isFloatingButton={true} onClick={toggleModal} />
     </>
   );
 }

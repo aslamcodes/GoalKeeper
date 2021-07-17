@@ -4,7 +4,9 @@ import { iconsStyle } from '../../../../utils/utils';
 import RoundedButton from '../Rounded Button/RoundedButton';
 
 export default function AddButton(props) {
-  const addButtonHandler = (e) => {};
+  const addButtonHandler = (e) => {
+    props.onClick();
+  };
 
   return (
     <RoundedButton
