@@ -1,0 +1,20 @@
+.check-button {
+  color: #a3cd9e;
+  background-color: #35635b;
+  font-size: 30px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.check-button:focus {
+  outline: none;
+}
+
+.check-button:active {
+  transform: scale(0.9);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}

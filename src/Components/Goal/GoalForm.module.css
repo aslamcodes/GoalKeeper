@@ -1,0 +1,35 @@
+.goalform {
+  width: 40%;
+  padding: 30px;
+  margin: 30px auto;
+  background-color: #35635b;
+  color: #e5f1e3;
+}
+
+.goalform__control {
+  margin: 20px auto;
+}
+
+.goalform__control label {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.goalform__control input {
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  border-bottom: 2px solid #a3cd9e;
+  width: 100%;
+  color: #e5f1e3;
+  margin-top: 15px;
+}
+
+.goalform__control input:focus,
+.goalform__control input:active {
+  outline: none;
+}
+
+.goalform__actions {
+  text-align: right;
+}

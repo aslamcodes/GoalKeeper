@@ -1,0 +1,9 @@
+.step ul li {
+  list-style-type: none;
+  font-size: 20px;
+}
+
+.step {
+  margin: 20px auto 10px;
+  background-color: #35635b;
+}
