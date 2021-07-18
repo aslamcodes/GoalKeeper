@@ -5,6 +5,8 @@ import RoundedButton from '../Rounded Button/RoundedButton';
 
 export default function AddButton(props) {
   const addButtonHandler = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
     props.onClick();
   };
 

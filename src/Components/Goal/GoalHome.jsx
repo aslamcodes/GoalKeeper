@@ -33,7 +33,7 @@ export default function GoalHome() {
 
       {isModalActive &&
         ReactDOM.createPortal(
-          <Backdrop />,
+          <Backdrop onClick={toggleModal} />,
           document.getElementById('root-backdrop')
         )}
 

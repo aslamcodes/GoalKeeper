@@ -1,9 +1,12 @@
 .goalform {
-  width: 40%;
   padding: 30px;
   margin: 30px auto;
   background-color: #35635b;
   color: #e5f1e3;
+}
+
+.goalform .invalid {
+  border-color: red;
 }
 
 .goalform__control {
