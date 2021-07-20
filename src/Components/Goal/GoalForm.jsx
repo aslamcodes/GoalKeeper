@@ -18,6 +18,11 @@ export default function GoalForm(props) {
       return { ...prev, goal: e.target.value };
     });
   };
+  const StepInputHandler = (e) => {
+    setGoalData((prev) => {
+      return { ...prev, goal: e.target.value };
+    });
+  };
   const submitHandler = (e) => {
     e.preventDefault();
     validateGoalInputField();
@@ -43,6 +48,7 @@ export default function GoalForm(props) {
       <Card className={Styles['goalform']}>
         <div className={Styles['goalform__control']}>
           <label htmlFor={'goalInput'}>Goal</label>
+
           <input
             id="goalInput"
             value={goalData.goal}
@@ -52,6 +58,7 @@ export default function GoalForm(props) {
             onChange={goalInputHandler}
             onBlur={validateGoalInputField}></input>
         </div>
+
         <div
           className={`${Styles['goalform__control']} ${Styles['goalform__control__steps']}`}>
           <label htmlFor={'stepInput'}>Steps</label>
@@ -59,6 +66,7 @@ export default function GoalForm(props) {
             return <StepInput key={pos} />;
           })}
         </div>
+
         <div className={Styles['goalform__actions']}>
           <AddButton
             isFloatingButton={false}

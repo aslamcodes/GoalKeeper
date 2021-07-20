@@ -1,8 +1,10 @@
 .goalform {
   padding: 30px;
-  margin: 30px auto;
+  margin: 10px auto;
   background-color: #35635b;
   color: #e5f1e3;
+  height: 100%;
+  max-height: 80vh;
 }
 
 .goalform .invalid {
