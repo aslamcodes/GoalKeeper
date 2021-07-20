@@ -1,3 +1,24 @@
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  background: #35635b;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: #a3cd9e;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #e5f1e3;
+}
 .goalform {
   padding: 30px;
   margin: 10px auto;
