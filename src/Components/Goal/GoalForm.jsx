@@ -52,7 +52,8 @@ export default function GoalForm(props) {
             onChange={goalInputHandler}
             onBlur={validateGoalInputField}></input>
         </div>
-        <div className={Styles['goalform__control']}>
+        <div
+          className={`${Styles['goalform__control']} ${Styles['goalform__control__steps']}`}>
           <label htmlFor={'stepInput'}>Steps</label>
           {stepInputFieldArray.map((pos) => {
             return <StepInput key={pos} />;

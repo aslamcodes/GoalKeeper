@@ -18,6 +18,11 @@
   font-weight: bold;
 }
 
+.goalform__control__steps {
+  border: 2px solid #a3cd9e;
+  max-height: 20vh;
+  overflow-y: scroll;
+}
 .goalform__control input {
   background-color: transparent;
   border: none;
