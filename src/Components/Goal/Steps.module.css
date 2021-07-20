@@ -8,12 +8,19 @@
   background-color: #35635b;
   padding-top: 5px;
   padding-bottom: 0px;
-}
+  height: 15vh;
+  max-height: 15vh;
 
+  padding-right: 5px;
+}
 .steps {
   max-height: 15vh;
   overflow: scroll;
   height: 100%;
   padding: 0px;
   margin: 0px;
+}
+
+.steps::-webkit-scrollbar {
+  display: none;
 }

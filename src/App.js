@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React from 'react';
 import { FaBars } from 'react-icons/fa';
 import Navbar from './Components/UI/Navbar/Navbar.jsx';
 import GoalHome from './Components/Goal/GoalHome.jsx';
