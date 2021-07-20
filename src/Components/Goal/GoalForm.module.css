@@ -42,15 +42,23 @@
 }
 
 .goalform__control__steps {
-  border: 2px solid #a3cd9e;
+  border: 4px solid #a3cd9e;
   max-height: 20vh;
+  border-radius: 8px;
   overflow-y: scroll;
+  padding: 3px;
+}
+#goalInput {
+  border-bottom: 3px solid #a3cd9e;
+}
+.goalform__control__steps h1 {
+  margin-left: 5px;
 }
 .goalform__control input {
   background-color: transparent;
   border: none;
   font-size: 30px;
-  border-bottom: 2px solid #a3cd9e;
+  border-bottom: 3px solid #a3cd9e;
   width: 100%;
   color: #e5f1e3;
   margin-top: 15px;
