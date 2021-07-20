@@ -5,7 +5,7 @@ import GoalHome from './Components/Goal/GoalHome.jsx';
 function App() {
   return (
     <>
-      <Navbar title="Goal Keeper" buttonTitle={<FaBars />}></Navbar>;
+      <Navbar title="Goal Keeper" buttonTitle={<FaBars />}></Navbar>
       <GoalHome />
     </>
   );
