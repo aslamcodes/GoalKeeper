@@ -10,7 +10,12 @@ export default function GoalForm(props) {
     steps: [],
   });
   const [goalInputIsValid, setGoalInputIsValid] = useState(true);
-  const [stepInputFieldArray, setStepInputFieldArray] = useState([1]);
+  const [stepInputFieldArray, setStepInputFieldArray] = useState([1, 2, 3]);
+  const onAddStepItem = (e) => {
+    setGoalData((prev) => {
+      return { ...prev, steps: [...prev.steps, e.target.value] };
+    });
+  };
   // Handler Functions
   const goalInputHandler = (e) => {
     validateGoalInputField();
@@ -18,11 +23,7 @@ export default function GoalForm(props) {
       return { ...prev, goal: e.target.value };
     });
   };
-  const StepInputHandler = (e) => {
-    setGoalData((prev) => {
-      return { ...prev, goal: e.target.value };
-    });
-  };
+
   const submitHandler = (e) => {
     e.preventDefault();
     validateGoalInputField();
@@ -30,7 +31,8 @@ export default function GoalForm(props) {
   };
   //Validation Functions
   const validateGoalInputField = () => {
-    if (goalData.goal.trim().length <= 0) {
+    if (!goalData.goal) return;
+    if (goalData.goal === '') {
       setGoalInputIsValid(false);
     } else {
       setGoalInputIsValid(true);
@@ -48,7 +50,6 @@ export default function GoalForm(props) {
       <Card className={Styles['goalform']}>
         <div className={Styles['goalform__control']}>
           <label htmlFor={'goalInput'}>Goal</label>
-
           <input
             id="goalInput"
             value={goalData.goal}
@@ -61,9 +62,15 @@ export default function GoalForm(props) {
 
         <div
           className={`${Styles['goalform__control']} ${Styles['goalform__control__steps']}`}>
-          <label htmlFor={'stepInput'}>Steps</label>
-          {stepInputFieldArray.map((pos) => {
-            return <StepInput key={pos} />;
+          <h1>Steps</h1>
+          {stepInputFieldArray.map((_, idx) => {
+            return (
+              <StepInput
+                key={idx}
+                value={goalData.steps[idx]}
+                onBlur={onAddStepItem}
+              />
+            );
           })}
         </div>
 
