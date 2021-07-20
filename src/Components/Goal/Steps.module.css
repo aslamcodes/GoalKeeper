@@ -6,4 +6,14 @@
 .step {
   margin: 20px auto 10px;
   background-color: #35635b;
+  padding-top: 5px;
+  padding-bottom: 0px;
+}
+
+.steps {
+  max-height: 15vh;
+  overflow: scroll;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
 }

@@ -4,7 +4,7 @@ import Styles from './Steps.module.css';
 export default function Steps(props) {
   return (
     <Card className={Styles['step']}>
-      <ul>
+      <ul className={Styles['steps']}>
         {props.steps.map((step, idx) => {
           return <li key={idx}>{step}</li>;
         })}
